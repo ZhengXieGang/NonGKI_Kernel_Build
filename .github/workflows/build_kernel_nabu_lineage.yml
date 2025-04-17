@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Prepare Configuration
         run: |
-          CONFIG_ENV=$(grep -w "CONFIG_ENV" nabu/nabu_lineage_a15.env${{ env.PROFILE_NAME }} | head -n 1 | cut -d "=" -f 2)
+          CONFIG_ENV=$(grep -w "CONFIG_ENV" nabu/nabu_lineage_a15.env | head -n 1 | cut -d "=" -f 2)
           CONFIG_LIST=(
               DEVICE_NAME
               DEVICE_CODENAME
